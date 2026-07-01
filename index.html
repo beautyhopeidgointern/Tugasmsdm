@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App - Naskah Podcast Kelompok 5</title>
+    <style>
+        :root {
+            --primary-color: #1d4ed8;
+            --secondary-color: #eff6ff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Table Styles */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Script Styles */
+        .dialog {
+            margin-bottom: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .dialog:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .speaker {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .stage-direction {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: #f1f5f9;
+            padding: 0.5rem;
+            border-left: 3px solid var(--text-muted);
+            margin: 1rem 0;
+        }
+
+        .scene-title {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 1rem; }
+            header { padding: 1.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Naskah Podcast & Video Praktik MSDM</h1>
+        <p>Kelompok 5: Dini Januariska | Indah | Dikjul</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>1. Identitas Proyek</h2>
+            <ul>
+                <li><strong>Judul Video:</strong> Podcast Aparatur Berintegritas: Membedah Sisi Gelap vs Sisi Ideal Pelayanan Publik</li>
+                <li><strong>Tema Utama:</strong> Disiplin, Etika, dan Integritas Aparatur dalam Pelaksanaan Pelayanan Publik</li>
+                <li><strong>Format Penyajian:</strong> Talk Show / Podcast Edukatif dengan Cuplikan Perbandingan</li>
+                <li><strong>Target Durasi:</strong> 10 Menit</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>2. Pembagian Tugas</h2>
+            <div class="table-responsive">
+                <table>
+                    <tr>
+                        <th>Nama Anggota</th>
+                        <th>Peran Utama</th>
+                        <th>Tanggung Jawab</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Dini</strong></td>
+                        <td>Ketua Kelompok & Host</td>
+                        <td>Mengoordinasikan jadwal rekaman, memandu diskusi, menyunting video, dan transisi teks.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indah</strong></td>
+                        <td>Narasumber 1 (Analis)</td>
+                        <td>Menyusun teori dari jurnal, memastikan analisis sesuai akademik, dan menyusun laporan.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dikjul</strong></td>
+                        <td>Narasumber 2 (Praktisi)</td>
+                        <td>Menyusun alur cerita (skenario), menyiapkan peralatan, dan memperagakan praktik lapangan.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Skrip Percakapan Podcast</h2>
+
+            <div class="scene-title">[00.00 - 00.45] AUDIO/VISUAL: INTRO BUMPER VIDEO</div>
+            <div class="stage-direction">
+                Musik intro berbunyi lembut. Layar menampilkan teks: Tugas Video Praktik Manajemen Sumber Daya Manusia Sektor Publik. Kelompok 5: Dini, Indah, Dikjul. Judul: Disiplin, Etika, dan Integritas Aparatur dalam Pelaksanaan Pelayanan Publik.
+            </div>
+
+            <div class="scene-title">[00.45 - 01.30] SCENE 1: STUDIO PODCAST (OPENING)</div>
+            <div class="stage-direction">
+                Kamera merekam suasana studio. Dini duduk di tengah memegang mikrofon, Indah di kiri, dan Dikjul di kanan.
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Halo semuanya! Selamat datang di Ruang Publik Podcast, wadah diskusi interaktif mahasiswa Administrasi Publik. Bersama saya, Dini Januariska, selama sepuluh menit ke depan kita akan membedah pilar krusial birokrasi, yaitu Disiplin, Etika, dan Integritas Aparatur Pelayanan Publik. Hari ini saya ditemani rekan Indah selaku Analis Kebijakan Akademis, dan Dikjul selaku Praktisi Sektor Publik. Halo Indah, Halo Dikjul, apa kabar?"
+            </div>
+            <div class="dialog">
+                <span class="speaker">Indah:</span>
+                "Halo Dini, luar biasa. Senang bisa berbagi perspektif hari ini."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dikjul:</span>
+                "Halo Dini, kabar baik. Semoga diskusi kita bisa memberikan gambaran riil kondisi lapangan."
+            </div>
+
+            <div class="scene-title">[01.30 - 03.00] SCENE 2: PENGANTAR TEORI</div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Sebelum kita melangkah ke studi kasus, saya ke Indah dulu. Secara akademis, seberapa penting etika dan integritas melekat pada diri seorang aparatur dalam melayani masyarakat?"
+            </div>
+            <div class="dialog">
+                <span class="speaker">Indah:</span>
+                "Pertanyaan bagus, Dini. Merujuk literatur MSDM Sektor Publik, karakteristik utama ASN itu bukan sekadar mengejar target performa, tapi wajib menjunjung tinggi keadilan, akuntabilitas, dan kompas moral yang kuat. Disiplin bukan hanya soal jam masuk kerja, tapi tanggung jawab moral terhadap hak masyarakat."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Berarti etika itu jangkar utamanya ya. Tapi kenyataannya, sering ada kesenjangan regulasi dengan fakta di lapangan. Mari kita saksikan cuplikan skenario pelayanan yang sering dikeluhkan masyarakat."
+            </div>
+
+            <div class="scene-title">[03.00 - 04.30] SCENE 3: CUPLIKAN ILUSTRASI (PRAKTIK BURUK)</div>
+            <div class="stage-direction">
+                Video rekaman luar studio: Meja pelayanan. Petugas [Dikjul] datang terlambat, main HP.
+            </div>
+            <div class="dialog">
+                <span class="speaker">Warga:</span>
+                "Permisi Pak, saya mau mengurus surat administrasi yang kemarin ditolak."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Petugas:</span>
+                "(Wajah ketus) Aduh Bu, berkasnya kurang. Kembali besok saja ya, saya lagi sibuk."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Warga:</span>
+                "Tapi di loket depan bilangnya langsung ke sini saja Pak, persyaratannya sudah lengkap."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Petugas:</span>
+                "(Berbisik) Ya kalau mau cepat, prosedurnya begini. Kecuali kalau mau ada 'biaya administrasi khusus'."
+            </div>
+
+            <div class="scene-title">[04.30 - 07.30] SCENE 4: BEDAH JURNAL DAN ANALISIS KASUS</div>
+            <div class="stage-direction">
+                Kamera kembali ke studio podcast.
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Sangat memprihatinkan ya. Skenario tadi ternyata refleksi nyata dari banyak penelitian. Salah satunya di jurnal tahun 2026 yang ditulis oleh Saputri dkk mengenai Analisis Penegakan Integritas dan Etika ASN di Kantor Lurah 5 Ilir Kota Palembang. Dikjul, mengapa pelanggaran seperti ini masih berulang?"
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dikjul:</span>
+                "Betul, Dini. Kalau kita bedah temuan jurnal tersebut, akar masalahnya sistemik. Pertama, lemahnya kontrol pimpinan. Pembiaran terhadap hal kecil akan mengkristal jadi budaya buruk. Kedua, mindset. Sebagian aparatur masih ingin dilayani, bukan melayani. Dampaknya fatal, public trust akan merosot."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Dari sisi akademis, Indah, bagaimana jurnal tersebut menganalisis kondisi idealnya?"
+            </div>
+            <div class="dialog">
+                <span class="speaker">Indah:</span>
+                "Jurnal tersebut menegaskan bahwa penegakan etika butuh keselarasan antara sistem pengawasan berbasis digital dan komitmen individu. Ketika sistem transparan, celah ilegal bisa dipotong. Mari kita lihat perbandingan pelayanan publik ketika integritas dijaga."
+            </div>
+
+            <div class="scene-title">[07.30 - 08.30] SCENE 5: CUPLIKAN ILUSTRASI (PRAKTIK BAIK)</div>
+            <div class="stage-direction">
+                Video rekaman luar studio: Pelayanan ideal.
+            </div>
+            <div class="dialog">
+                <span class="speaker">Petugas:</span>
+                "Selamat pagi Ibu, ada yang bisa kami bantu? Mari silakan duduk."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Warga:</span>
+                "Pagi Pak, saya ingin mengurus kelanjutan berkas administrasi saya."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Petugas:</span>
+                "Baik Ibu, seluruh berkas digitalnya sudah terverifikasi. Prosesnya maksimal 15 menit dan layanan ini gratis ya Bu."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Warga:</span>
+                "Alhamdulillah, terima kasih banyak Pak."
+            </div>
+
+            <div class="scene-title">[08.30 - 09.30] SCENE 6: REKOMENDASI DAN SOLUSI</div>
+            <div class="stage-direction">
+                Kamera kembali ke studio podcast.
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Kontras yang luar biasa. Memasuki bagian akhir, pedoman penugasan mewajibkan adanya rekomendasi. Berdasarkan analisis jurnal 2026, apa solusi yang bisa kelompok kita tawarkan?"
+            </div>
+            <div class="dialog">
+                <span class="speaker">Indah:</span>
+                "Rekomendasi pertama: Penerapan Sistem Pengawasan Melekat Terintegrasi. Instansi harus memakai absensi biometrik real-time yang terhubung langsung dengan tunjangan kinerja."
+            </div>
+            <div class="dialog">
+                <span class="speaker">Dikjul:</span>
+                "Kedua: Internalisasi Budaya Pelayanan Hospitality. Aparatur garda depan wajib dapat pelatihan etika. Dan ketiga: Digitalisasi Penuh Alur Pelayanan untuk meminimalkan kontak fisik sehingga potensi pungli tereliminasi."
+            </div>
+
+            <div class="scene-title">[09.30 - 10.00] SCENE 7: CLOSING</div>
+            <div class="dialog">
+                <span class="speaker">Dini (Host):</span>
+                "Kesimpulan podcast kita hari ini: kualitas pelayanan publik tidak hanya ditentukan kecanggihan sistem, melainkan integritas dan kedisiplinan aparatur sebagai motor penggeraknya. Saya Dini Januariska, bersama Indah dan Dikjul pamit undur diri. Terima kasih, Salam Administrasi Publik!"
+            </div>
+            <div class="stage-direction">
+                Kamera perlahan fade out. Layar beralih menampilkan daftar referensi ilmiah.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>4. Daftar Referensi</h2>
+            <div class="stage-direction">Tampilkan di layar selama 15 detik terakhir.</div>
+            <ol>
+                <li>Pasolong, Harbani. (2019). <em>Teori Administrasi Publik</em>. Bandung: Alfabeta.</li>
+                <li>Saputri, S., Alifah, F. N., Dwianda, S., dkk. (2026). Analisis Penegakan Integritas dan Etika Aparatur Sipil Negara dalam Pelayanan Publik: Studi Kasus Kantor Lurah 5 Ilir Kota Palembang. <em>Aliansi: Jurnal Hukum, Pendidikan dan Sosial Humaniora</em>, 3(2), 93–104.</li>
+                <li>Undang-Undang Republik Indonesia Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+</html>
